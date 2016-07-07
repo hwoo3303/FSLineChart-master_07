@@ -1,15 +1,15 @@
 //
-//  ViewController.h
-//  Pedometer
+//  PedometerViewController.h
+//  FSLineChart
 //
-//  Created by Jay Versluis on 29/10/2015.
-//  Copyright © 2015 Pinkstone Pictures LLC. All rights reserved.
+//  Created by MyMac on 2016. 7. 7..
+//  Copyright © 2016년 Arthur GUIBERT. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 @import CoreMotion;
 
-@interface ViewController : UIViewController
+@interface PedometerViewController : UIViewController
 
 @property (strong, nonatomic) CMPedometer *pedometer;
 @property (strong, nonatomic) IBOutlet UILabel *stepsLabel;

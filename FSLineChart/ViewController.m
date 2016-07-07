@@ -9,11 +9,14 @@
 #import "ViewController.h"
 #import "FSLineChart.h"
 #import "UIColor+FSPalette.h"
+#import "PedometerViewController.h"
+#import "HistoricViewController.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) IBOutlet FSLineChart *chart;
 @property (nonatomic, strong) IBOutlet FSLineChart *chartWithDates;
+//@property (nonatomic, strong) IBOutlet
 
 @end
 
@@ -53,6 +56,7 @@
 
 - (void)loadChartWithDates {
     // Generating some dummy data
+    
     NSMutableArray* chartData = [NSMutableArray arrayWithCapacity:13];
     for(int i=0;i<13;i++) {
         chartData[i] = [NSNumber numberWithFloat: (float)i / 30.0f + (float)(rand() % 10000) / 500.0f];
@@ -71,7 +75,7 @@
     _chartWithDates.displayDataPoint = YES;
     _chartWithDates.dataPointColor = [UIColor fsOrange];
     _chartWithDates.dataPointBackgroundColor = [UIColor fsOrange];
-    _chartWithDates.dataPointRadius = 2;
+    _chartWithDates.dataPointRadius = 0;
     _chartWithDates.color = [_chartWithDates.dataPointColor colorWithAlphaComponent:0.3];
     _chartWithDates.valueLabelPosition = ValueLabelLeftMirrored;
     
@@ -80,7 +84,7 @@
     };
     
     _chartWithDates.labelForValue = ^(CGFloat value) {
-        return [NSString stringWithFormat:@"%.02f €", value];
+        return [NSString stringWithFormat:@"%.0f 회", value];
     };
     
     [_chartWithDates setChartData:chartData];

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226A39FE1D2E882500FC0FF8 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A39FD1D2E882500FC0FF8 /* DatePickerViewController.m */; };
+		226A3A011D2E884100FC0FF8 /* HistoricViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A001D2E884100FC0FF8 /* HistoricViewController.m */; };
+		226A3A0D1D2E8B2B00FC0FF8 /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226A3A0C1D2E8B2B00FC0FF8 /* PedometerViewController.m */; };
 		8EA19AEC19DB55E9005F4BD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA19AEB19DB55E9005F4BD1 /* main.m */; };
 		8EA19AEF19DB55E9005F4BD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA19AEE19DB55E9005F4BD1 /* AppDelegate.m */; };
 		8EA19AF219DB55E9005F4BD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA19AF119DB55E9005F4BD1 /* ViewController.m */; };
@@ -29,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		226A39FC1D2E882500FC0FF8 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		226A39FD1D2E882500FC0FF8 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		226A39FF1D2E884100FC0FF8 /* HistoricViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricViewController.h; sourceTree = "<group>"; };
+		226A3A001D2E884100FC0FF8 /* HistoricViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricViewController.m; sourceTree = "<group>"; };
+		226A3A0B1D2E8B2B00FC0FF8 /* PedometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
+		226A3A0C1D2E8B2B00FC0FF8 /* PedometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
 		8EA19AE619DB55E9005F4BD1 /* FSLineChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSLineChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA19AEA19DB55E9005F4BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EA19AEB19DB55E9005F4BD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		226A39FB1D2E877900FC0FF8 /* Pedometer */ = {
+			isa = PBXGroup;
+			children = (
+				226A39FC1D2E882500FC0FF8 /* DatePickerViewController.h */,
+				226A39FD1D2E882500FC0FF8 /* DatePickerViewController.m */,
+				226A39FF1D2E884100FC0FF8 /* HistoricViewController.h */,
+				226A3A001D2E884100FC0FF8 /* HistoricViewController.m */,
+				226A3A0B1D2E8B2B00FC0FF8 /* PedometerViewController.h */,
+				226A3A0C1D2E8B2B00FC0FF8 /* PedometerViewController.m */,
+			);
+			name = Pedometer;
+			sourceTree = "<group>";
+		};
 		8EA19ADD19DB55E9005F4BD1 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +109,7 @@
 		8EA19AE819DB55E9005F4BD1 /* FSLineChart */ = {
 			isa = PBXGroup;
 			children = (
+				226A39FB1D2E877900FC0FF8 /* Pedometer */,
 				8EA19B1219DB569A005F4BD1 /* FSLineChart */,
 				8EA19AED19DB55E9005F4BD1 /* AppDelegate.h */,
 				8EA19AEE19DB55E9005F4BD1 /* AppDelegate.m */,
@@ -237,10 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226A3A0D1D2E8B2B00FC0FF8 /* PedometerViewController.m in Sources */,
 				8EA19AF219DB55E9005F4BD1 /* ViewController.m in Sources */,
+				226A3A011D2E884100FC0FF8 /* HistoricViewController.m in Sources */,
 				8EA19AEF19DB55E9005F4BD1 /* AppDelegate.m in Sources */,
 				8EA19AEC19DB55E9005F4BD1 /* main.m in Sources */,
 				8EA19B1119DB5696005F4BD1 /* FSLineChart.m in Sources */,
+				226A39FE1D2E882500FC0FF8 /* DatePickerViewController.m in Sources */,
 				8EA19B1519DB56E8005F4BD1 /* UIColor+FSPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FSLineChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,6 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FSLineChart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slipcorp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,22 +1,16 @@
 //
 //  HistoricViewController.m
-//  Pedometer
+//  FSLineChart
 //
-//  Created by Jay Versluis on 31/10/2015.
-//  Copyright © 2015 Pinkstone Pictures LLC. All rights reserved.
+//  Created by MyMac on 2016. 7. 7..
+//  Copyright © 2016년 Arthur GUIBERT. All rights reserved.
 //
 
 #import "HistoricViewController.h"
-#import "DatePickerViewController.h"
-@import CoreMotion;
+
 
 @interface HistoricViewController ()
-@property (strong, nonatomic) IBOutlet UILabel *startDateLabel;
-@property (strong, nonatomic) IBOutlet UILabel *endDateLabel;
-@property (strong, nonatomic) NSDate *startDate;
-@property (strong, nonatomic) NSDate *endDate;
-@property (strong, nonatomic) NSDate *tempDate;
-@property (strong, nonatomic) CMPedometer *pedometer;
+
 @end
 
 @implementation HistoricViewController
@@ -55,8 +49,8 @@
         
         // reflect this fact on our label too
         self.startDateLabel.text = [self turnDateIntoString:_startDate];
-//        NSLog(@"%@", today);
-//        NSLog(@"%@", yesterday);
+        //        NSLog(@"%@", today);
+        //        NSLog(@"%@", yesterday);
     }
     
     return _startDate;
@@ -177,7 +171,7 @@
     UINavigationController *navController = [storyboard instantiateViewControllerWithIdentifier:@"DatePicker"];
     DatePickerViewController *dateController = navController.viewControllers.lastObject;
     dateController.dateType = dateType;
-
+    
     // give it a date
     if ([dateType isEqualToString:@"startDate"]) {
         dateController.date = self.startDate;
@@ -194,7 +188,7 @@
 }
 
 - (void)updateLabelWithDate:(NSDate *)date forType:(NSString *)dateType {
-
+    
     // update start or end date labels
     if ([dateType isEqualToString:@"startDate"]) {
         self.startDateLabel.text = [self turnDateIntoString:date];
@@ -215,7 +209,7 @@
     NSString *distance;
     NSString *floorsUp;
     NSString *floorsDown;
-
+    
     // format our data
     if ([CMPedometer isStepCountingAvailable]) {
         steps = [NSString stringWithFormat:@"%@", [formatter stringFromNumber:data.numberOfSteps]];

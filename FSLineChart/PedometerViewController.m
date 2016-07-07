@@ -1,19 +1,19 @@
 //
-//  ViewController.m
-//  Pedometer
+//  PedometerViewController.m
+//  FSLineChart
 //
-//  Created by Jay Versluis on 29/10/2015.
-//  Copyright © 2015 Pinkstone Pictures LLC. All rights reserved.
+//  Created by MyMac on 2016. 7. 7..
+//  Copyright © 2016년 Arthur GUIBERT. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "PedometerViewController.h"
 
 
-@interface ViewController ()
+@interface PedometerViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PedometerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -109,18 +109,7 @@
     } else {
         self.flightsDownLabel.text = @"Floors descended\nnot available.";
     }
-
+    
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @end
